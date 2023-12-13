@@ -1,0 +1,731 @@
+[
+  {
+    "x": 0,
+    "y": 0,
+    "image_url": "assets/img/hall_1.png",
+    "status": 1,
+    "description": "Move using arrow keys on your keyboard. You can see your movement in the top left corner.",
+    "items": [],
+    "npc": []
+  },
+  {
+    "x": 0,
+    "y": 1,
+    "image_url": "assets/img/hall_2.png",
+    "status": 1,
+    "description": "Empty hallway. There's a room you can enter",
+    "items": [],
+    "npc": []
+  },
+  {
+    "x": 0,
+    "y": 2,
+    "image_url": "assets/img/hall_2.png",
+    "status": 1,
+    "description": "Empty hallway. There's a room you can enter",
+    "items": [],
+    "npc": []
+  },
+  {
+    "x": 0,
+    "y": 3,
+    "image_url": "assets/img/hall_1.png",
+    "status": 1,
+    "description": "Empty hallway",
+    "items": [],
+    "npc": []
+  },
+  {
+    "x": 0,
+    "y": 4,
+    "image_url": "assets/img/hall_11.png",
+    "status": 1,
+    "description": "Empty hallway. You have two directions where you can go.",
+    "items": [],
+    "npc": []
+  },
+  {
+    "x": 0,
+    "y": 5,
+    "image_url": "assets/img/hall_1.png",
+    "status": 1,
+    "description": "Empty hallway",
+    "items": [],
+    "npc": []
+  },
+  {
+    "x": 0,
+    "y": 6,
+    "image_url": "assets/img/hall_2.png",
+    "status": 1,
+    "description": "Empty hallway. There's a room you can enter",
+    "items": [],
+    "npc": []
+  },
+  {
+    "x": 0,
+    "y": 7,
+    "image_url": "assets/img/hall_1.png",
+    "status": 1,
+    "description": "Empty hallway",
+    "items": [],
+    "npc": []
+  },
+  {
+    "x": 0,
+    "y": 8,
+    "image_url": "assets/img/hall_5.png",
+    "status": 1,
+    "description": "Empty hallway. There's a room you can enter",
+    "items": [],
+    "npc": []
+  },
+  {
+    "x": 1,
+    "y": 0,
+    "image_url": "assets/img/wall.png",
+    "status": 0,
+    "description": "Wall.",
+    "items": [],
+    "npc": []
+  },
+  {
+    "x": 1,
+    "y": 1,
+    "image_url": "assets/img/room.png",
+    "status": 2,
+    "description": "Room",
+    "items": [],
+    "npc": []
+  },
+  {
+    "x": 1,
+    "y": 2,
+    "image_url": "assets/img/room.png",
+    "status": 2,
+    "description": "Room",
+    "items": [],
+    "npc": []
+  },
+  {
+    "x": 1,
+    "y": 3,
+    "image_url": "assets/img/wall.png",
+    "status": 0,
+    "description": "Wall",
+    "items": [],
+    "npc": []
+  },
+  {
+    "x": 1,
+    "y": 4,
+    "image_url": "assets/img/hall_1.png",
+    "status": 1,
+    "description": "Empty hallway",
+    "items": [],
+    "npc": []
+  },
+  {
+    "x": 1,
+    "y": 5,
+    "image_url": "assets/img/wall.png",
+    "status": 0,
+    "description": "Wall",
+    "items": [],
+    "npc": []
+  },
+  {
+    "x": 1,
+    "y": 6,
+    "image_url": "assets/img/room.png",
+    "status": 2,
+    "description": "Room",
+    "items": [],
+    "npc": []
+  },
+  {
+    "x": 1,
+    "y": 7,
+    "image_url": "assets/img/wall.png",
+    "status": 0,
+    "description": "Wall",
+    "items": [],
+    "npc": []
+  },
+  {
+    "x": 1,
+    "y": 8,
+    "image_url": "assets/img/room.png",
+    "status": 2,
+    "description": "Room",
+    "items": [],
+    "npc": []
+  },
+  {
+    "x": 2,
+    "y": 0,
+    "image_url": "assets/img/room.png",
+    "status": 2,
+    "description": "Room",
+    "items": [],
+    "npc": []
+  },
+  {
+    "x": 2,
+    "y": 1,
+    "image_url": "assets/img/room.png",
+    "status": 2,
+    "description": "Room",
+    "items": [],
+    "npc": []
+  },
+  {
+    "x": 2,
+    "y": 2,
+    "image_url": "assets/img/wall.png",
+    "status": 0,
+    "description": "Wall",
+    "items": [],
+    "npc": []
+  },
+  {
+    "x": 2,
+    "y": 3,
+    "image_url": "assets/img/wall.png",
+    "status": 0,
+    "description": "Wall",
+    "items": [],
+    "npc": []
+  },
+  {
+    "x": 2,
+    "y": 4,
+    "image_url": "assets/img/hall_1.png",
+    "status": 1,
+    "description": "Empty hallway",
+    "items": [],
+    "npc": []
+  },
+  {
+    "x": 2,
+    "y": 5,
+    "image_url": "assets/img/wall.png",
+    "status": 0,
+    "description": "Wall",
+    "items": [],
+    "npc": []
+  },
+  {
+    "x": 2,
+    "y": 6,
+    "image_url": "assets/img/room.png",
+    "status": 2,
+    "description": "Room",
+    "items": [],
+    "npc": []
+  },
+  {
+    "x": 2,
+    "y": 7,
+    "image_url": "assets/img/room.png",
+    "status": 2,
+    "description": "Room",
+    "items": [],
+    "npc": []
+  },
+  {
+    "x": 2,
+    "y": 8,
+    "image_url": "assets/img/wall.png",
+    "status": 0,
+    "description": "Wall",
+    "items": [],
+    "npc": []
+  },
+  {
+    "x": 3,
+    "y": 0,
+    "image_url": "assets/img/hall_6.png",
+    "status": 1,
+    "description": "Empty hallway",
+    "items": [],
+    "npc": []
+  },
+  {
+    "x": 3,
+    "y": 1,
+    "image_url": "assets/img/hall_12.png",
+    "status": 1,
+    "description": "Empty hallway. There are two rooms you can enter.",
+    "items": [],
+    "npc": []
+  },
+  {
+    "x": 3,
+    "y": 2,
+    "image_url": "assets/img/hall_1.png",
+    "status": 1,
+    "description": "Empty hallway",
+    "items": [],
+    "npc": []
+  },
+  {
+    "x": 3,
+    "y": 3,
+    "image_url": "assets/img/hall_1.png",
+    "status": 1,
+    "description": "Empty hallway",
+    "items": [],
+    "npc": []
+  },
+  {
+    "x": 3,
+    "y": 4,
+    "image_url": "assets/img/hall_10.png",
+    "status": 1,
+    "description": "Empty hallway. You can go all directions here.",
+    "items": [],
+    "npc": []
+  },
+  {
+    "x": 3,
+    "y": 5,
+    "image_url": "assets/img/hall_1.png",
+    "status": 1,
+    "description": "Empty hallway",
+    "items": [],
+    "npc": []
+  },
+  {
+    "x": 3,
+    "y": 6,
+    "image_url": "assets/img/hall_12.png",
+    "status": 1,
+    "description": "Empty hallway. There are two rooms.",
+    "items": [],
+    "npc": []
+  },
+  {
+    "x": 3,
+    "y": 7,
+    "image_url": "assets/img/hall_3.png",
+    "status": 1,
+    "description": "Empty hallway. There's a room you can enter.",
+    "items": [],
+    "npc": []
+  },
+  {
+    "x": 3,
+    "y": 8,
+    "image_url": "assets/img/hall_6.png",
+    "status": 1,
+    "description": "Empty hallway",
+    "items": [],
+    "npc": []
+  },
+  {
+    "x": 4,
+    "y": 0,
+    "image_url": "assets/img/wall.png",
+    "status": 0,
+    "description": "Wall",
+    "items": [],
+    "npc": []
+  },
+  {
+    "x": 4,
+    "y": 1,
+    "image_url": "assets/img/room.png",
+    "status": 2,
+    "description": "Room",
+    "items": [],
+    "npc": []
+  },
+  {
+    "x": 4,
+    "y": 2,
+    "image_url": "assets/img/room.png",
+    "status": 2,
+    "description": "Room",
+    "items": [],
+    "npc": []
+  },
+  {
+    "x": 4,
+    "y": 3,
+    "image_url": "assets/img/wall.png",
+    "status": 0,
+    "description": "Wall",
+    "items": [],
+    "npc": []
+  },
+  {
+    "x": 4,
+    "y": 4,
+    "image_url": "assets/img/hall_1.png",
+    "status": 1,
+    "description": "Empty hallway",
+    "items": [],
+    "npc": []
+  },
+  {
+    "x": 4,
+    "y": 5,
+    "image_url": "assets/img/wall.png",
+    "status": 0,
+    "description": "Wall",
+    "items": [],
+    "npc": []
+  },
+  {
+    "x": 4,
+    "y": 6,
+    "image_url": "assets/img/room.png",
+    "status": 2,
+    "description": "Room",
+    "items": [],
+    "npc": []
+  },
+  {
+    "x": 4,
+    "y": 7,
+    "image_url": "assets/img/wall.png",
+    "status": 0,
+    "description": "Wall",
+    "items": [],
+    "npc": []
+  },
+  {
+    "x": 4,
+    "y": 8,
+    "image_url": "assets/img/room.png",
+    "status": 2,
+    "description": "Room",
+    "items": [],
+    "npc": []
+  },
+  {
+    "x": 5,
+    "y": 0,
+    "image_url": "assets/img/hall_13.png",
+    "status": 1,
+    "description": "Empty hallway. You can make a turn here.",
+    "items": [],
+    "npc": []
+  },
+  {
+    "x": 5,
+    "y": 1,
+    "image_url": "assets/img/hall_1.png",
+    "status": 1,
+    "description": "Empty hallway",
+    "items": [],
+    "npc": []
+  },
+  {
+    "x": 5,
+    "y": 2,
+    "image_url": "assets/img/hall_13.png",
+    "status": 1,
+    "description": "Empty hallway. You can make a turn here.",
+    "items": [],
+    "npc": []
+  },
+  {
+    "x": 5,
+    "y": 3,
+    "image_url": "assets/img/wall.png",
+    "status": 0,
+    "description": "Wall",
+    "items": [],
+    "npc": []
+  },
+  {
+    "x": 5,
+    "y": 4,
+    "image_url": "assets/img/hall_13.png",
+    "status": 1,
+    "description": "Empty hallway. You can make a turn here.",
+    "items": [],
+    "npc": []
+  },
+  {
+    "x": 5,
+    "y": 5,
+    "image_url": "assets/img/hall_1.png",
+    "status": 1,
+    "description": "Empty hallway",
+    "items": [],
+    "npc": []
+  },
+  {
+    "x": 5,
+    "y": 6,
+    "image_url": "assets/img/hall_2.png",
+    "status": 1,
+    "description": "Empty hallway. There's a room you can enter.",
+    "items": [],
+    "npc": []
+  },
+  {
+    "x": 5,
+    "y": 7,
+    "image_url": "assets/img/hall_1.png",
+    "status": 1,
+    "description": "Empty hallway",
+    "items": [],
+    "npc": []
+  },
+  {
+    "x": 5,
+    "y": 8,
+    "image_url": "assets/img/hall_7.png",
+    "status": 1,
+    "description": "Empty hallway. You can turn here or enter a room.",
+    "items": [],
+    "npc": []
+  },
+  {
+    "x": 6,
+    "y": 0,
+    "image_url": "assets/img/hall_1.png",
+    "status": 1,
+    "description": "Empty hallway",
+    "items": [],
+    "npc": []
+  },
+  {
+    "x": 6,
+    "y": 1,
+    "image_url": "assets/img/wall.png",
+    "status": 0,
+    "description": "Wall",
+    "items": [],
+    "npc": []
+  },
+  {
+    "x": 6,
+    "y": 2,
+    "image_url": "assets/img/hall_1.png",
+    "status": 1,
+    "description": "Empty hallway",
+    "items": [],
+    "npc": []
+  },
+  {
+    "x": 6,
+    "y": 3,
+    "image_url": "assets/img/wall.png",
+    "status": 0,
+    "description": "Wall",
+    "items": [],
+    "npc": []
+  },
+  {
+    "x": 6,
+    "y": 4,
+    "image_url": "assets/img/wall.png",
+    "status": 0,
+    "description": "Wall",
+    "items": [],
+    "npc": []
+  },
+  {
+    "x": 6,
+    "y": 5,
+    "image_url": "assets/img/room.png",
+    "status": 2,
+    "description": "Room",
+    "items": [],
+    "npc": []
+  },
+  {
+    "x": 6,
+    "y": 6,
+    "image_url": "assets/img/room.png",
+    "status": 2,
+    "description": "Room",
+    "items": [],
+    "npc": []
+  },
+  {
+    "x": 6,
+    "y": 7,
+    "image_url": "assets/img/wall.png",
+    "status": 0,
+    "description": "Wall",
+    "items": [],
+    "npc": []
+  },
+  {
+    "x": 6,
+    "y": 8,
+    "image_url": "assets/img/hall_1.png",
+    "status": 1,
+    "description": "Empty hallway",
+    "items": [],
+    "npc": []
+  },
+  {
+    "x": 7,
+    "y": 0,
+    "image_url": "assets/img/hall_1.png",
+    "status": 1,
+    "description": "Empty hallway",
+    "items": [],
+    "npc": []
+  },
+  {
+    "x": 7,
+    "y": 1,
+    "image_url": "assets/img/wall.png",
+    "status": 0,
+    "description": "Wall",
+    "items": [],
+    "npc": []
+  },
+  {
+    "x": 7,
+    "y": 2,
+    "image_url": "assets/img/hall_8.png",
+    "status": 1,
+    "description": "Empty hallway. You can make a turn here.",
+    "items": [],
+    "npc": []
+  },
+  {
+    "x": 7,
+    "y": 3,
+    "image_url": "assets/img/hall_3.png",
+    "status": 1,
+    "description": "Empty hallway. There's a room you can enter.",
+    "items": [],
+    "npc": []
+  },
+  {
+    "x": 7,
+    "y": 4,
+    "image_url": "assets/img/hall_3.png",
+    "status": 1,
+    "description": "Empty hallway. There's a room you can enter.",
+    "items": [],
+    "npc": []
+  },
+  {
+    "x": 7,
+    "y": 5,
+    "image_url": "assets/img/hall_2.png",
+    "status": 1,
+    "description": "Empty hallway. There's a room you can enter.",
+    "items": [],
+    "npc": []
+  },
+  {
+    "x": 7,
+    "y": 6,
+    "image_url": "assets/img/hall_13.png",
+    "status": 1,
+    "description": "Empty hallway. You can make a turn here.",
+    "items": [],
+    "npc": []
+  },
+  {
+    "x": 7,
+    "y": 7,
+    "image_url": "assets/img/room.png",
+    "status": 2,
+    "description": "Room",
+    "items": [],
+    "npc": []
+  },
+  {
+    "x": 7,
+    "y": 8,
+    "image_url": "assets/img/hall_1.png",
+    "status": 1,
+    "description": "Empty hallway",
+    "items": [],
+    "npc": []
+  },
+  {
+    "x": 8,
+    "y": 0,
+    "image_url": "assets/img/hall_4.png",
+    "status": 1,
+    "description": "Empty hallway. There's a room you can enter.",
+    "items": [],
+    "npc": []
+  },
+  {
+    "x": 8,
+    "y": 1,
+    "image_url": "assets/img/room.png",
+    "status": 2,
+    "description": "Room",
+    "items": [],
+    "npc": []
+  },
+  {
+    "x": 8,
+    "y": 2,
+    "image_url": "assets/img/wall.png",
+    "status": 0,
+    "description": "Wall",
+    "items": [],
+    "npc": []
+  },
+  {
+    "x": 8,
+    "y": 3,
+    "image_url": "assets/img/room.png",
+    "status": 2,
+    "description": "Room",
+    "items": [],
+    "npc": []
+  },
+  {
+    "x": 8,
+    "y": 4,
+    "image_url": "assets/img/room.png",
+    "status": 2,
+    "description": "Room",
+    "items": [],
+    "npc": []
+  },
+  {
+    "x": 8,
+    "y": 5,
+    "image_url": "assets/img/wall.png",
+    "status": 0,
+    "description": "Wall",
+    "items": [],
+    "npc": []
+  },
+  {
+    "x": 8,
+    "y": 6,
+    "image_url": "assets/img/hall_8.png",
+    "status": 1,
+    "description": "Empty hallway. There's a room you can enter.",
+    "items": [],
+    "npc": []
+  },
+  {
+    "x": 8,
+    "y": 7,
+    "image_url": "assets/img/hall_2.png",
+    "status": 1,
+    "description": "Empty hallway",
+    "items": [],
+    "npc": []
+  },
+  {
+    "x": 8,
+    "y": 8,
+    "image_url": "assets/img/hall_8.png",
+    "status": 1,
+    "description": "Empty hallway. There's a room you can enter.",
+    "items": [],
+    "npc": []
+  }
+]

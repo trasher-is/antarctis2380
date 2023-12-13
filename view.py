@@ -1,0 +1,13 @@
+# view.py
+
+class LocationView:
+    # ...
+
+class PlayerIcon:
+    # ...
+
+class ActionBox:
+    # ...
+
+class PlayerInventory:
+    # ...
