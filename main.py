@@ -183,12 +183,13 @@ with open('assets/locations.json', 'r') as f:
     locations = json.load(f)
 
 
-# create game objects with pygame.Sprite classes
-# Player class is main game class which handles movement and other clases updates based on location
+# create game objects with pygame.Sprite classes inheritance
+# Player class is main game class which handles movement and updates other classes based on location
 
 class Player(pygame.sprite.Sprite):
     def __init__(self, location_view, action_box):
         pygame.sprite.Sprite.__init__(self)
+        self.image = None
         self.map_image = pygame.image.load(os.path.join('assets', 'img', 'map.png')).convert()
         self.rect = self.map_image.get_rect()
         self.velocity = 100
