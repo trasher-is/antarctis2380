@@ -1,5 +1,16 @@
-import pygame, sys, os, json
+import pygame
 
+import json
+import os
+import sys
+
+
+# Gamestate selector for different game states to split main game from character selection and end game
+# intro(): fake intro screen
+# character_selection(): choose a character picture from list, use arrow keys and enter or mouse
+# main_game(): core game loop, handles all elements
+# end_game(): fake end game window, can restart to character selection
+# state_manager(): manages state switching
 
 class GameState:
     def __init__(self):
@@ -27,7 +38,6 @@ class GameState:
         screen.blit(start_text_surface, (800, 660))
 
         pygame.display.flip()
-
 
     def character_selection(self):
         global current_character, selected_character
@@ -65,25 +75,23 @@ class GameState:
         screen.blit(char_select_background, (0, 0))
         screen.blit(character_images[current_character % len(character_images)], (100, 60))
         screen.blit(left_image, left_button)
-        screen.blit(right_image,right_button)
+        screen.blit(right_image, right_button)
         screen.blit(select_image, select_button)
         screen.blit(char_info_image, char_info_field)
 
         pygame.display.flip()
 
-
     def main_game(self):
-        running = True
         location_view = LocationView()
-        actionbox = ActionBox()
-        player = Player(location_view, actionbox)
+        action_box = ActionBox()
+        player = Player(location_view, action_box)
         player_icon = PlayerIcon()
-        player_inventory = PlayerInventory()
 
-        while running:
+        while True:
             for event in pygame.event.get():
                 if event.type == pygame.QUIT:
-                    running = False
+                    pygame.quit()
+                    sys.exit()
                 if event.type == pygame.KEYDOWN:
                     if event.key == pygame.K_UP:
                         player.move('up')
@@ -93,20 +101,45 @@ class GameState:
                         player.move('left')
                     elif event.key == pygame.K_RIGHT:
                         player.move('right')
+                    elif event.key == pygame.K_x:
+                        self.state = 'end_game'
 
+            if self.state == 'end_game':
+                break
 
             screen.blit(main_background, (0, 0))
 
             player.draw(screen)
             player_icon.draw(screen)
-            actionbox.draw(screen)
+            action_box.draw(screen)
             location_view.draw(screen)
-            player_inventory.draw(screen)
 
             pygame.display.flip()
 
-        pygame.quit()
-        sys.exit()
+    def end_game(self):
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                pygame.quit()
+                sys.exit()
+            if event.type == pygame.KEYDOWN:
+                if event.key == pygame.K_ESCAPE:
+                    pygame.quit()
+                    sys.exit()
+                elif event.key == pygame.K_r:
+                    self.state = 'character_selection'
+
+        end_game_font = pygame.font.Font(os.path.join('assets', 'font', 'Preahvihear.ttf'), 80)
+        end_game_text = 'FINAL DESTINATION'
+        end_game_new_font = pygame.font.Font(os.path.join('assets', 'font', 'Preahvihear.ttf'), 40)
+        end_game_new_text = 'Press ESC to exit or R to restart'
+
+        screen.blit(end_game_background, (0, 0))
+        end_game_text_surface = end_game_font.render(end_game_text, True, (255, 255, 255))
+        screen.blit(end_game_text_surface, end_game_text_surface.get_rect(center=(640, 360)))
+        end_game_new_text_surface = end_game_new_font.render(end_game_new_text, True, (255, 255, 255))
+        screen.blit(end_game_new_text_surface, end_game_text_surface.get_rect(center=(700, 600)))
+
+        pygame.display.flip()
 
     def state_manager(self):
         if self.state == 'intro':
@@ -115,7 +148,11 @@ class GameState:
             self.character_selection()
         if self.state == 'main_game':
             self.main_game()
+        if self.state == 'end_game':
+            self.end_game()
 
+
+# initialize pygame engine and load backgrounds and character images, read json file
 
 pygame.init()
 clock = pygame.time.Clock()
@@ -127,6 +164,7 @@ screen = pygame.display.set_mode((1280, 720))
 intro_background = pygame.image.load(os.path.join('assets', 'img', 'intro_bg8.png')).convert()
 char_select_background = pygame.image.load(os.path.join('assets', 'img', 'intro_bg8b.png')).convert()
 main_background = pygame.image.load(os.path.join('assets', 'img', 'bg.png')).convert()
+end_game_background = pygame.image.load(os.path.join('assets', 'img', 'intro_bg8b.png')).convert()
 
 character_images = [
     pygame.image.load(os.path.join('assets', 'img', 'char_f_1.png')).convert_alpha(),
@@ -138,18 +176,18 @@ character_images = [
     pygame.image.load(os.path.join('assets', 'img', 'char_m_3.png')).convert_alpha(),
     pygame.image.load(os.path.join('assets', 'img', 'char_m_4.png')).convert_alpha()
 ]
-
 current_character = 0
-selected_character = None
-
-font = pygame.font.Font(os.path.join('assets', 'font', 'Preahvihear.ttf'), 30)
+selected_character = 0
 
 with open('assets/locations.json', 'r') as f:
     locations = json.load(f)
 
 
+# create game objects with pygame.Sprite classes
+# Player class is main game class which handles movement and other clases updates based on location
+
 class Player(pygame.sprite.Sprite):
-    def __init__(self, location_view, actionbox):
+    def __init__(self, location_view, action_box):
         pygame.sprite.Sprite.__init__(self)
         self.map_image = pygame.image.load(os.path.join('assets', 'img', 'map.png')).convert()
         self.rect = self.map_image.get_rect()
@@ -160,11 +198,10 @@ class Player(pygame.sprite.Sprite):
         self.tile_y = 0
         self.update_image()
         self.location_view = location_view
-        self.actionbox = actionbox
+        self.action_box = action_box
 
     def draw(self, surface):
         surface.blit(self.image, (10, 10))
-
 
     def move(self, direction):
         new_tile_x = self.tile_x
@@ -233,7 +270,7 @@ class Player(pygame.sprite.Sprite):
     def update_actionbox(self):
         for location in locations:
             if location['x'] == self.tile_x and location['y'] == self.tile_y:
-                self.actionbox.update(location)
+                self.action_box.update(location)
 
 
 class LocationView(pygame.sprite.Sprite):
@@ -256,7 +293,6 @@ class PlayerIcon(pygame.sprite.Sprite):
         self.rect = None
 
     def draw(self, surface):
-        global selected_character
         self.image = character_images[selected_character]
         self.rect = self.image.get_rect(center=(180, 640))
         surface.blit(self.image, self.rect)
@@ -268,43 +304,27 @@ class ActionBox(pygame.sprite.Sprite):
         self.image = pygame.Surface((620, 190), pygame.SRCALPHA)
         self.rect = self.image.get_rect(center=(640, 610))
         self.font = pygame.font.Font(None, 30)
-        self.text = self.get_text(locations[0])
-
-    def get_text(self, location):
-        description = '\n'.join(location['description'])
-        items_text = ''
-        if location.get('status') == 2:
-            items = location.get('items', [])
-            if items:
-                items_text = 'There are items: ' + ', '.join(map(str, items))
-            else:
-                items_text = 'There are no items here.'
-        return description + '\n\n' + items_text
+        self.text1 = locations[0]['description'][0]
+        self.text2 = locations[0]['description'][1]
 
     def draw(self, surface):
-        self.image.fill((0, 0, 0, 0))
-        lines = self.text.split('\n')
-        for i, line in enumerate(lines):
-            text_surface = self.font.render(line, True, (250, 250, 250))
-            y = self.rect.height // 2 + i * self.font.get_linesize() - len(lines) * self.font.get_linesize() // 2
-            text_rect = text_surface.get_rect(center=(self.rect.width // 2, y + 30))
-            self.image.blit(text_surface, text_rect)
+        text_surface1 = self.font.render(self.text1, True, (255, 255, 255))
+        text_surface2 = self.font.render(self.text2, True, (255, 255, 255))
+        self.image.blit(text_surface1, (10, 10))
+        self.image.blit(text_surface2, (10, 40))
         surface.blit(self.image, self.rect)
 
     def update(self, location):
-        self.text = self.get_text(location)
+        new_text1 = location['description'][0]
+        new_text2 = location['description'][1]
+        self.text1 = new_text1
+        self.text2 = new_text2
+        self.image.fill((0, 0, 0, 0))
+        text_surface1 = self.font.render(new_text1, True, (255, 255, 255))
+        text_surface2 = self.font.render(new_text2, True, (255, 255, 255))
+        self.image.blit(text_surface1, (10, 10))
+        self.image.blit(text_surface2, (10, 40))
         self.draw(self.image)
-
-
-class PlayerInventory(pygame.sprite.Sprite):
-    def __init__(self):
-        pygame.sprite.Sprite.__init__(self)
-        self.image = pygame.Surface((320, 320))
-        self.image.fill('white')
-        self.rect = self.image.get_rect(center=(1120, 560))
-
-    def draw(self, surface):
-        surface.blit(self.image, self.rect)
 
 
 while True:

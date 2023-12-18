@@ -8,6 +8,7 @@
 - [x] character movement
 - [x] environment
 - [ ] itemisation
+- [x] end game logic is very simple for now
 
 ### known bugs:
 - [ ] at some places character can go thru walls, needs some aditional logic with nested rooms
@@ -24,6 +25,9 @@
 - Python 3.10+
 - Pygame 2.5.2
 
+
+
+### Artwork generated with SD1.5, edited with Paint.net
 
 
 ---
