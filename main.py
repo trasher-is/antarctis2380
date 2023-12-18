@@ -246,11 +246,10 @@ class Player(pygame.sprite.Sprite):
         self.update_actionbox()
 
     def update_image(self):
-        self.get_location()
-        self.image = self.map_image.copy()
+        new_image = self.map_image
         circle_mask = pygame.Surface((300, 300), pygame.SRCALPHA)
         pygame.draw.ellipse(circle_mask, (255, 255, 255, 255), (0, 0, 300, 300))
-        circle_mask.blit(self.image, (self.pos_x, self.pos_y), special_flags=pygame.BLEND_RGBA_MIN)
+        circle_mask.blit(new_image, (self.pos_x, self.pos_y), special_flags=pygame.BLEND_RGBA_MIN)
 
         marker = pygame.Surface((30, 30), pygame.SRCALPHA)
         pygame.draw.line(marker, (250, 250, 250), (15, 0), (15, 30), 2)
@@ -258,10 +257,6 @@ class Player(pygame.sprite.Sprite):
         marker_rect = marker.get_rect(center=circle_mask.get_rect().center)
         circle_mask.blit(marker, marker_rect)
         self.image = circle_mask
-
-    def get_location(self):
-        print(self.tile_x, self.tile_y)
-        return self.tile_x, self.tile_y
 
     def update_location_view(self):
         for location in locations:
